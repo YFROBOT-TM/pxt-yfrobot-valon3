@@ -4,8 +4,7 @@
     "description": "YFRobot Valon 3.0 MakeCode Extensions For Micro:bit",
     "license": "MIT",
     "dependencies": {
-        "core": "*",
-        "neopixel": "github:elecfreaks/pxt-neopixel#0.7.6"
+        "core": "*"
     },
     "files": [
         "README.md",
