@@ -18,5 +18,5 @@
     "valon3.onIrButton|param|action": "触发动作",
     "valon3.onIrButton|param|button": "要检查的按钮",
     "valon3.onIrButton|param|handler": "引发事件时要运行的正文代码",
-    "valon3.wasAnyIrButtonPressed": "如果自上次调用此函数以来已按下任何按钮，则返回true。否则为false。",
+    "valon3.wasAnyIrButtonPressed": "如果自上次调用此函数以来已按下任何按钮，则返回true。否则为false。"
 }
