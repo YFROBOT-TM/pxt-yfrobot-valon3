@@ -87,9 +87,9 @@ namespace valon3 {
     }
 
     export enum IrButtonAction {
-        //% block="pressed"
+        //% blockId="Pressed" block="pressed"
         Pressed = 0,
-        //% block="released"
+        //% blockId="Released" block="released"
         Released = 1,
     }
 
@@ -180,7 +180,7 @@ namespace valon3 {
     //% weight=90
     //% blockId=valon_motor_MotorRun block="motor|%index|move|%direction|at speed|%speed"
     //% speed.min=0 speed.max=255
-    //% index.fieldEditor="gridpicker" index.fieldOptions.columns=2
+    //% index.fieldEditor="gridpicker" index.fieldOptions.columns=3
     //% direction.fieldEditor="gridpicker" direction.fieldOptions.columns=2
     export function motorRun(index: Motors, direction: Dir, speed: number): void {
         if (index > 2 || index < 0)
@@ -209,7 +209,7 @@ namespace valon3 {
     //% group="Motor control"
     //% weight=89
     //% blockId=valon_motor_motorStop block="motor |%motor stop"
-    //% motor.fieldEditor="gridpicker" motor.fieldOptions.columns=2 
+    //% motor.fieldEditor="gridpicker" motor.fieldOptions.columns=3 
     export function motorStop(motor: Motors): void {
         motorRun(motor, 0, 0);
     }
@@ -236,7 +236,7 @@ namespace valon3 {
     //% group="LineFollow sensor"
     //% weight=80
     //% blockId=valon_read_Patrol block="read %patrol line tracking sensor"
-    //% patrol.fieldEditor="gridpicker" patrol.fieldOptions.columns=2 
+    //% patrol.fieldEditor="gridpicker" patrol.fieldOptions.columns=3 
     export function readPatrol(patrol: Patrol): number {
         if (patrol == Patrol.PatrolLeft) {
             return pins.digitalReadPin(valonPatrolLeft)
@@ -452,12 +452,11 @@ namespace valon3 {
      * @param handler body code to run when event is raised
      */
     //% group="IR_Receiver"
+    //% weight=13
     //% blockId=valon_infrared_on_ir_button
     //% block="on IR button | %button | %action"
-    //% button.fieldEditor="gridpicker"
-    //% button.fieldOptions.columns=3
+    //% button.fieldEditor="gridpicker" button.fieldOptions.columns=3
     //% button.fieldOptions.tooltips="false"
-    //% weight=13
     export function onIrButton(button: IrButton, action: IrButtonAction, handler: () => void) {
         control.onEvent(
             action === IrButtonAction.Pressed
