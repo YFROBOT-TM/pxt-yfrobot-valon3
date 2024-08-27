@@ -1,5 +1,5 @@
 {
-    "name": "Valon-I V3.0",
+    "name": "pxt-valon3",
     "version": "3.0.0",
     "description": "YFRobot Valon-I V3.0 MakeCode Extensions For Micro:bit",
     "license": "MIT",
@@ -9,8 +9,9 @@
     "files": [
         "README.md",
         "main.ts",
-        "_locales/zh-cn/valon-strings.json",
-        "_locales/zh-tw/valon-strings.json"
+        "_locales/pxt-valon3-strings.json",
+        "_locales/zh-cn/pxt-valon3-strings.json",
+        "_locales/zh-tw/pxt-valon3-strings.json"
     ],
     "testFiles": [
         "test.ts"
