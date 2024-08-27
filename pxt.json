@@ -10,8 +10,11 @@
         "README.md",
         "main.ts",
         "_locales/pxt-valon3-strings.json",
+        "_locales/pxt-valon3-jsdoc-strings.json",
         "_locales/zh-cn/pxt-valon3-strings.json",
-        "_locales/zh-tw/pxt-valon3-strings.json"
+        "_locales/zh-cn/pxt-valon3-jsdoc-strings.json",
+        "_locales/zh-tw/pxt-valon3-strings.json",
+        "_locales/zh-tw/pxt-valon3-jsdoc-strings.json"
     ],
     "testFiles": [
         "test.ts"
