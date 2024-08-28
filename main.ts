@@ -18,9 +18,11 @@ let valonMotorLA = AnalogPin.P14
 let valonMotorRD = DigitalPin.P15
 let valonMotorRA = AnalogPin.P16
 // patrol pin
+let valonPatrolLeftMost = DigitalPin.P6
 let valonPatrolLeft = DigitalPin.P1
 let valonPatrolMiddle = DigitalPin.P2
 let valonPatrolRight = DigitalPin.P8
+let valonPatrolRightMost = DigitalPin.P7
 
 enum PingUnit {
     //% block="cm"
@@ -77,12 +79,16 @@ namespace valon3 {
     }
 
     export enum Patrol {
+        //% blockId="patrolLeftMost" block="leftMost"
+        PatrolLeftMost = 6,
         //% blockId="patrolLeft" block="left"
         PatrolLeft = 1,
         //% blockId="patrolMiddle" block="middle"
         PatrolMiddle = 2,
         //% blockId="patrolRight" block="right"
-        PatrolRight = 8
+        PatrolRight = 8,
+        //% blockId="patrolRightMost" block="rightMost"
+        PatrolRightMost = 7
     }
 
     // IR
@@ -245,7 +251,7 @@ namespace valon3 {
 
     /**
       * Read line tracking sensor.
-      * @param patrol patrol sensor number.
+      * @param patrol patrol sensor number, eg: valon3.Patrol.PatrolMiddle.
       */
     //% group="LineFollow sensor"
     //% weight=80
@@ -258,6 +264,10 @@ namespace valon3 {
             return pins.digitalReadPin(valonPatrolMiddle)
         } else if (patrol == Patrol.PatrolRight) {
             return pins.digitalReadPin(valonPatrolRight)
+        } else if (patrol == Patrol.PatrolLeftMost) {
+            return pins.digitalReadPin(valonPatrolLeftMost)
+        } else if (patrol == Patrol.PatrolRightMost) {
+            return pins.digitalReadPin(valonPatrolRightMost)
         } else {
             return -1
         }
