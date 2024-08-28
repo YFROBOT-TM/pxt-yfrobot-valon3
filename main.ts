@@ -23,6 +23,8 @@ let valonPatrolLeft = DigitalPin.P1
 let valonPatrolMiddle = DigitalPin.P2
 let valonPatrolRight = DigitalPin.P8
 let valonPatrolRightMost = DigitalPin.P7
+// valon patrol mode
+let valon3_patrolMode = 0
 
 enum PingUnit {
     //% block="cm"
@@ -243,10 +245,14 @@ namespace valon3 {
         pins.setPull(DigitalPin.P2, PinPullMode.PullNone)
         pins.setPull(DigitalPin.P8, PinPullMode.PullNone)
         if(sMode === valon3.SensorMode.M5){
+            valon3_patrolMode = 5;
             led.enable(false);
             pins.setPull(DigitalPin.P6, PinPullMode.PullNone)
             pins.setPull(DigitalPin.P7, PinPullMode.PullNone)
+        }else{
+            valon3_patrolMode = 3;
         }
+        
     }
 
     /**
@@ -264,11 +270,16 @@ namespace valon3 {
             return pins.digitalReadPin(valonPatrolMiddle)
         } else if (patrol == Patrol.PatrolRight) {
             return pins.digitalReadPin(valonPatrolRight)
-        } else if (patrol == Patrol.PatrolLeftMost) {
-            return pins.digitalReadPin(valonPatrolLeftMost)
-        } else if (patrol == Patrol.PatrolRightMost) {
-            return pins.digitalReadPin(valonPatrolRightMost)
-        } else {
+        }
+        if(valon3_patrolMode === 5){
+            if (patrol == Patrol.PatrolLeftMost) {
+                return pins.digitalReadPin(valonPatrolLeftMost)
+            } 
+            if (patrol == Patrol.PatrolRightMost) {
+                return pins.digitalReadPin(valonPatrolRightMost)
+            }
+        }
+         else {
             return -1
         }
     }
