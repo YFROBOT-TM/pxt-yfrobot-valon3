@@ -71,9 +71,9 @@ namespace valon3 {
 
     export enum SensorMode {
         //% blockId="Mode3" block="3"
-        3,
+        M3 = 3,
         //% blockId="Mode5" block="5"
-        5
+        M5 = 5
     }
 
     export enum Patrol {
@@ -224,19 +224,19 @@ namespace valon3 {
     /**
       * Enable or Disable line tracking sensor.
       * @param enable line tracking sensor enable signal(0 or 1), eg: valon3.PatrolEnable.PatrolOn
-      * @param sensorMode line tracking sensor mode 3 or 5 sensors, eg: valon3.SensorMode.3
+      * @param sMode line tracking sensor mode 3 or 5 sensors, eg: valon3.SensorMode.M3
       */
     //% group="LineFollow sensor"
     //% weight=81
-    //% blockId=valon_Patrol_enable block="line tracking sensor %enable %sensorMode"
+    //% blockId=valon_Patrol_enable block="line tracking sensor %enable %sMode"
     //% enable.fieldEditor="gridpicker" enable.fieldOptions.columns=2
-    //% sensorMode.fieldEditor="gridpicker" sensorMode.fieldOptions.columns=2
-    export function enablePatrol(enable: PatrolEnable, sensorMode: SensorMode): void {
+    //% sMode.fieldEditor="gridpicker" sMode.fieldOptions.columns=2
+    export function enablePatrol(enable: PatrolEnable, sMode: SensorMode): void {
         pins.digitalWritePin(DigitalPin.P12, enable);
         pins.setPull(DigitalPin.P1, PinPullMode.PullNone)
         pins.setPull(DigitalPin.P2, PinPullMode.PullNone)
         pins.setPull(DigitalPin.P8, PinPullMode.PullNone)
-        if(sensorMode === valon3.SensorMode.5){
+        if(sMode === valon3.SensorMode.M5){
             led.enable(false);
             pins.setPull(DigitalPin.P6, PinPullMode.PullNone)
             pins.setPull(DigitalPin.P7, PinPullMode.PullNone)
