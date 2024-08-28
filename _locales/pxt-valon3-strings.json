@@ -51,7 +51,7 @@
     "valon3.motorRun|block": "motor|%index|move|%direction|at speed|%speed",
     "valon3.motorStop|block": "motor |%motor stop",
     "valon3.onIrButton|block": "on IR button | %button | %action",
-    "valon3.enablePatrol|block": "%enable line tracking sensor",
+    "valon3.enablePatrol|block": "line tracking sensor %enable %sensorMode",
     "valon3.readPatrol|block": "read %patrol line tracking sensor",
     "valon3.wasAnyIrButtonPressed|block": "any IR button was pressed",
     "{id:group}Motor control": "Motor control",
