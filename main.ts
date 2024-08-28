@@ -264,14 +264,7 @@ namespace valon3 {
     //% blockId=valon_read_Patrol block="read %patrol line tracking sensor"
     //% patrol.fieldEditor="gridpicker" patrol.fieldOptions.columns=3 
     export function readPatrol(patrol: Patrol): number {
-        if (patrol == Patrol.PatrolLeft) {
-            return pins.digitalReadPin(valonPatrolLeft)
-        } else if (patrol == Patrol.PatrolMiddle) {
-            return pins.digitalReadPin(valonPatrolMiddle)
-        } else if (patrol == Patrol.PatrolRight) {
-            return pins.digitalReadPin(valonPatrolRight)
-        }
-        if(valon3_patrolMode === 5){
+        if (valon3_patrolMode === 5) {
             if (patrol == Patrol.PatrolLeftMost) {
                 return pins.digitalReadPin(valonPatrolLeftMost)
             } 
@@ -279,9 +272,17 @@ namespace valon3 {
                 return pins.digitalReadPin(valonPatrolRightMost)
             }
         }
-         else {
+
+        if (patrol == Patrol.PatrolLeft) {
+            return pins.digitalReadPin(valonPatrolLeft)
+        } else if (patrol == Patrol.PatrolMiddle) {
+            return pins.digitalReadPin(valonPatrolMiddle)
+        } else if (patrol == Patrol.PatrolRight) {
+            return pins.digitalReadPin(valonPatrolRight)
+        } else {
             return -1
         }
+
     }
 
     
