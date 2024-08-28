@@ -69,6 +69,13 @@ namespace valon3 {
         PatrolOff = 0x00
     }
 
+    export enum SensorMode {
+        //% blockId="Mode3" block="3"
+        3,
+        //% blockId="Mode5" block="5"
+        5
+    }
+
     export enum Patrol {
         //% blockId="patrolLeft" block="left"
         PatrolLeft = 1,
@@ -217,16 +224,23 @@ namespace valon3 {
     /**
       * Enable or Disable line tracking sensor.
       * @param enable line tracking sensor enable signal(0 or 1), eg: valon3.PatrolEnable.PatrolOn
+      * @param sensorMode line tracking sensor mode 3 or 5 sensors, eg: valon3.SensorMode.3
       */
     //% group="LineFollow sensor"
     //% weight=81
-    //% blockId=valon_Patrol_enable block="line tracking sensor %enable"
+    //% blockId=valon_Patrol_enable block="line tracking sensor %enable %sensorMode"
     //% enable.fieldEditor="gridpicker" enable.fieldOptions.columns=2
-    export function enablePatrol(enable: PatrolEnable): void {
+    //% sensorMode.fieldEditor="gridpicker" sensorMode.fieldOptions.columns=2
+    export function enablePatrol(enable: PatrolEnable, sensorMode: SensorMode): void {
         pins.digitalWritePin(DigitalPin.P12, enable);
         pins.setPull(DigitalPin.P1, PinPullMode.PullNone)
         pins.setPull(DigitalPin.P2, PinPullMode.PullNone)
         pins.setPull(DigitalPin.P8, PinPullMode.PullNone)
+        if(sensorMode === valon3.SensorMode.5){
+            led.enable(false);
+            pins.setPull(DigitalPin.P6, PinPullMode.PullNone)
+            pins.setPull(DigitalPin.P7, PinPullMode.PullNone)
+        }
     }
 
     /**
