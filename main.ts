@@ -285,7 +285,19 @@ namespace valon3 {
 
     }
 
-    
+    /**
+     * Servo rotates to a specific angle
+     * @param pin to pin ,eg: "pin"
+     * @param angle to angle ,eg: "0~180"
+     */
+    //% group="YFRobot Servo"
+    //% weight=69
+    //% inlineInputMode=inline
+    //% block="set servo angle %angle" 
+    //% angle.min=0 angle.max=180
+    export function setServoAngle(angle: number): void {
+        pins.servoWritePin(AnalogPin.P4, angle);
+    }
 
     /**
      * Read ultrasonic sensor.

@@ -58,6 +58,7 @@
     "valon3.wasAnyIrButtonPressed|block": "any IR button was pressed",
     "{id:group}Motor control": "Motor control",
     "{id:group}LineFollow sensor": "LineFollow sensor",
+    "{id:group}YFRobot Servo": "Servo",
     "{id:group}Sonar sensor": "Sonar sensor",
     "{id:group}IR_Receiver": "IR Receiver",
     "{id:category}valon3": "Valon3",

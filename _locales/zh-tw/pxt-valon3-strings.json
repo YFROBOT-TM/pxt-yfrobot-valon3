@@ -58,6 +58,7 @@
     "valon3.wasAnyIrButtonPressed|block": "任意按鍵被按下",
     "{id:group}Motor control": "馬達控制",
     "{id:group}LineFollow sensor": "巡線傳感器",
+    "{id:group}YFRobot Servo": "舵機",
     "{id:group}Sonar sensor": "超音波感測器",
     "{id:group}IR_Receiver": "紅外遙控",
     "{id:category}valon3": "Valon3",
