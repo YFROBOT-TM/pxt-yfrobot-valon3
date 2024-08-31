@@ -257,7 +257,7 @@ namespace valon3 {
 
     /**
       * Read line tracking sensor.
-      * @param patrol patrol sensor number, eg: valon3.Patrol.PatrolMiddle.
+      * @param patrol patrol sensor number, eg: valon3.Patrol.PatrolMiddle
       */
     //% group="LineFollow sensor"
     //% weight=80
