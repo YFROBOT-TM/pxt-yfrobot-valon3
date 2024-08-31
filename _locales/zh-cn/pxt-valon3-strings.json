@@ -46,6 +46,7 @@
     "valon3.Patrol.PatrolMiddle|block": "中间",
     "valon3.Patrol.PatrolRight|block": "右侧",
     "valon3.Patrol.PatrolRightMost|block": "最右侧",
+    "valon3.setServoAngle|block": "设置舵机角度 %angle",
     "valon3.Ultrasonic|block": "超声波距离TPin |%tpin EPin |%epin |%unit",
     "valon3.connectIrReceiver|block": "连接红外接收到 %pin| 编码格式：%protocol",
     "valon3.irButtonCode|block": "红外按键%button|值",
