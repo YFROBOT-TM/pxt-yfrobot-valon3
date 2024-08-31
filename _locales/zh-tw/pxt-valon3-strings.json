@@ -53,7 +53,7 @@
     "valon3.motorRun|block": "電機|%index|方向|%direction|速度|%speed",
     "valon3.motorStop|block": "電機 |%motor 停止",
     "valon3.onIrButton|block": "當紅外按鍵 %button| %action",
-    "valon3.enablePatrol|block": "巡線傳感器 %enable %sensorMode",
+    "valon3.enablePatrol|block": "巡線傳感器 %enable %sMode",
     "valon3.readPatrol|block": "巡線傳感器|%patrol",
     "valon3.wasAnyIrButtonPressed|block": "任意按鍵被按下",
     "{id:group}Motor control": "馬達控制",
