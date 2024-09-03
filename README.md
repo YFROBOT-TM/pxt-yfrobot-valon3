@@ -35,12 +35,6 @@ valon3.enablePatrol(valon3.PatrolEnable.PatrolOff)
 serial.writeNumber(valon3.readPatrol(valon3.Patrol.PatrolLeft))
 ```
 
-* Turn on/off the LEDs
-
-```blocks
-valon3.writeLED(valon3.LED.LEDLeft, valon3.LEDswitch.turnOn)
-```
-
 * Read IR sensor value
 
 ```blocks
