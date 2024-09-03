@@ -1,6 +1,6 @@
 {
     "name": "pxt-valon3",
-    "version": "3.0.0",
+    "version": "3.0.1",
     "license": "MIT",
     "description": "YFRobot Valon-I V3.0 MakeCode Extensions For Micro:bit",
     "dependencies": {
