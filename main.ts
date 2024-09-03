@@ -303,6 +303,7 @@ namespace valon3 {
      * Read ultrasonic sensor.
      * @param tpin Sonar sensor trigger pin. eg: DigitalPin.P0
      * @param epin Sonar sensor echo pin. eg: DigitalPin.P9
+     * @param unit Sonar sensor unit. eg: PingUnit.Centimeters
      */
     //% group="Sonar sensor"
     //% weight=70
